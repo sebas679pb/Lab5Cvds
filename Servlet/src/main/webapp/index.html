@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<Style>
+    body{
+        background-color: rgb(17, 9, 75);
+        color:darkred;
+    }
+</Style>
+<script>
+    function validateForm() {
+        let x = document.forms["formId"]["id"].value;
+        if (isNaN(x) || x < 1 || x > 200 || x=="") {
+            alert("Numero invalido");
+        return false;
+        }
+    }
+</script>
+<html>
+    <head>
+        <title>Start Page</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        <form name="formId" action="/lab5Cvds" method="get" onsubmit="return validateForm()">
+            <h1>Digite el numero</h1>
+            <input name="id"  placeholder="Numero del id" ></input>
+            <button type="submit">Submit</button>
+        </form>
+    </body>
+</html>

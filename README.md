@@ -4,7 +4,7 @@
 
 ### LABORATORIO 5 - MVC PRIMEFACES INTRODUCTION
 
-##Juan David Martinez Cardozo - Jhon Sebastian Piñeros 
+## Juan David Martinez Cardozo - Jhon Sebastian Piñeros 
 
 ## PARTE I. - JUGANDO A SER UN CLIENTE HTTP
 1. Abra una terminal Linux o consola de comandos Windows.

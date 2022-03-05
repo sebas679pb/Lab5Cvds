@@ -1,0 +1,46 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:p="http://primefaces.org/ui">
+    <style>
+        body{
+        background-color: rgb(17, 9, 75);
+        color:darkred;
+        }
+        .moda{
+            visibility:hidden;
+        }
+    </style>
+    
+<h:body>
+ <h:form id="calculadora_form">
+    <p:outputLabel class="moda" value="#{calculadoraBean.getMode()}"/>
+    <br></br>
+    <p:inputText name="texto" value="#{calculadoraBean.text}"/>
+    <br></br>
+    <h1>Moda</h1>
+    <p:outputLabel value="#{calculadoraBean.mode}"/>
+    <h1>Media</h1>
+    <p:outputLabel value="#{calculadoraBean.mean}"/>
+    <h1>Varianza</h1>
+    <p:outputLabel value="#{calculadoraBean.variance}"/>
+    <h1>DesviacionEstandar</h1>
+    <p:outputLabel value="#{calculadoraBean.standardDeviation}"/>
+    <br></br>
+    <p:commandButton value="Submit" update="calculadora_form" actionListener="#{calculadoraBean.calculateXXX}"></p:commandButton>
+    <br></br>
+    <p:commandButton value="reset" update="calculadora_form" actionListener="#{calculadoraBean.restart()}"></p:commandButton>
+    <br></br>
+    <h:dataTable value="#{calculadoraBean.historial}"
+                    var="datos"  style="width: 600px;"
+                    rendered="#{calculadoraBean.historial.size()>0}">
+                <h:column>
+                    <f:facet name = "header">
+                        <h:outputLabel value="Historial datos"/>
+                    </f:facet>
+                    <h:outputLabel value="#{datos}"/>
+                </h:column>
+                </h:dataTable>
+ </h:form>
+</h:body>
+</html>
